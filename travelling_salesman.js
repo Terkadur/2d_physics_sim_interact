@@ -7,14 +7,11 @@ var input, button;
 var iter = false;
 
 function setup() {
-  createCanvas(1280, 512);
+  createCanvas(1024, 512);
   background(0);
   for (var i = 0; i < points; i++) {
-    dots[i] = [random(512), random(height), i];
+    dots[i] = [random(width), random(height), i];
   }
-  fill(255);
-  textSize(20);
-  text("Number of points:", 1024, 24);
   input = createInput();
   input.position(1024, 32);
   
@@ -29,7 +26,7 @@ function draw() {
     var d = 0;
     fill(0);
     noStroke();
-    rect(0, 0, 512, height);
+    rect(0, 0, width/2, height);
     fill(255);
     stroke(255);
     strokeWeight(2);
@@ -42,18 +39,17 @@ function draw() {
     }
     if (d < min_dist || min_dist == -1) {
       min_dist = d;
-      //print(dots[0][2], dots[1][2], dots[2][2]);
       print(min_dist);
       fill(0);
       noStroke();
-      rect(512, 0, 512, height);
+      rect(width/2, 0, width/2, height);
       fill(255);
       stroke(255);
       strokeWeight(2);
       for (var i = 0; i < points; i++) {
-        ellipse(dots[i][0] + 512, dots[i][1], 8, 8);
+        ellipse(dots[i][0] + width/2, dots[i][1], 8, 8);
         if (i != 0) {
-          line(dots[i][0] + 512, dots[i][1], dots[i - 1][0] + 512, dots[i - 1][1]);
+          line(dots[i][0] + width/2, dots[i][1], dots[i - 1][0] + width/2, dots[i - 1][1]);
         }
       }
     }
@@ -65,8 +61,6 @@ function draw() {
       }
     }
     if (max_i == -1) {
-      //print("finished");
-      //noLoop();
       iter = false;
     }
     else {
@@ -82,6 +76,9 @@ function draw() {
       rev(dots, max_i + 1, dots.length - 1);
     }
   }
+  fill(255);
+  textSize(20);
+  text(perm/total, 0, height-8);
 }
 
 
