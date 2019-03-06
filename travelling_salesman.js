@@ -7,7 +7,7 @@ var input, button;
 var iter = false;
 
 function setup() {
-  createCanvas(1024, 512);
+  createCanvas(1280, 512);
   background(0);
   for (var i = 0; i < points; i++) {
     dots[i] = [random(width), random(height), i];
@@ -80,7 +80,7 @@ function draw() {
     }
     fill(255);
     textSize(20);
-    text(round(100000*perm/total)/100000, 0, height-8);
+    text(round(100000*perm/total)/100000, 1024, height-8);
   }
 }
 
