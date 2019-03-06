@@ -78,10 +78,10 @@ function draw() {
       
       rev(dots, max_i + 1, dots.length - 1);
     }
+    fill(255);
+    textSize(20);
+    text(round(100000*perm/total)/100000, 0, height-8);
   }
-  fill(255);
-  textSize(20);
-  text(perm/total, 0, height-8);
 }
 
 
