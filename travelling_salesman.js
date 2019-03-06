@@ -12,6 +12,9 @@ function setup() {
   for (var i = 0; i < points; i++) {
     dots[i] = [random(width), random(height), i];
   }
+  fill(255);
+  textSize(20);
+  text("Number of points:", 1024, 24);
   input = createInput();
   input.position(1024, 32);
   
