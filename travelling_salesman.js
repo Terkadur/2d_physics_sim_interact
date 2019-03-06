@@ -10,7 +10,7 @@ function setup() {
   createCanvas(1280, 512);
   background(0);
   for (var i = 0; i < points; i++) {
-    dots[i] = [random(width), random(height), i];
+    dots[i] = [random(512), random(height), i];
   }
   fill(255);
   textSize(20);
@@ -29,7 +29,7 @@ function draw() {
     var d = 0;
     fill(0);
     noStroke();
-    rect(0, 0, width/2, height);
+    rect(0, 0, 512, height);
     fill(255);
     stroke(255);
     strokeWeight(2);
@@ -45,14 +45,14 @@ function draw() {
       print(min_dist);
       fill(0);
       noStroke();
-      rect(width/2, 0, width/2, height);
+      rect(512, 0, 512, height);
       fill(255);
       stroke(255);
       strokeWeight(2);
       for (var i = 0; i < points; i++) {
-        ellipse(dots[i][0] + width/2, dots[i][1], 8, 8);
+        ellipse(dots[i][0] + 512, dots[i][1], 8, 8);
         if (i != 0) {
-          line(dots[i][0] + width/2, dots[i][1], dots[i - 1][0] + width/2, dots[i - 1][1]);
+          line(dots[i][0] + 512, dots[i][1], dots[i - 1][0] + 512, dots[i - 1][1]);
         }
       }
     }
@@ -78,6 +78,8 @@ function draw() {
       
       rev(dots, max_i + 1, dots.length - 1);
     }
+    fill(0);
+    rect(1024, height/2, 256, height/2);
     fill(255);
     textSize(20);
     text(round(100000*perm/total)/100000, 1024, height-8);
