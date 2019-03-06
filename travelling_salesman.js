@@ -2,7 +2,7 @@ var points;
 var dots = [];
 var min_dist = -1;
 var perm = 0;
-var total = factorial(points);
+var total;
 var input, button;
 var iter = false;
 
@@ -25,6 +25,7 @@ function setup() {
 
 function draw() {
   if (iter) {
+    total = factorial(points);
     perm++;
     var d = 0;
     fill(0);
@@ -109,8 +110,7 @@ function factorial(n) {
 }
 
 function iterate() {
-  noLoop();
-  loop();
+  perm = 0;
   min_dist = -1;
   points = input.value();
   for (var i = 0; i < points; i++) {
