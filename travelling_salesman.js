@@ -80,10 +80,11 @@ function draw() {
       rev(dots, max_i + 1, dots.length - 1);
     }
     fill(0);
+    noStroke();
     rect(1024, height/2, 256, height/2);
     fill(255);
     textSize(20);
-    text(round(100000*perm/total)/100000, 1024, height-8);
+    text(100*round(100000*perm/total)/100000 + "%", 1024, height-8);
   }
 }
 
