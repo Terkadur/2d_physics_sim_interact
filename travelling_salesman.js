@@ -79,14 +79,14 @@ function draw() {
       
       rev(dots, max_i + 1, dots.length - 1);
     }
-    fill(255, 0, 0);
+    fill(0);
     noStroke();
     rect(1024, input.height+40, 256, 64);
     fill(255);
     textSize(20);
     text(100*round(100000*perm/total)/100000 + "% complete", 1024, input.height+56);
     text("Shortest path:", 1024, input.height+80);
-    text(min_dist, 1024, input.height+84);
+    text(min_dist, 1024, input.height+96);
   }
 }
 
