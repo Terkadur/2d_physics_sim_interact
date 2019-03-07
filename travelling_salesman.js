@@ -81,7 +81,7 @@ function draw() {
     }
     fill(0);
     noStroke();
-    rect(1024, height/2, 256, height/2);
+    rect(1024, input.height+40, 256, 64);
     fill(255);
     textSize(20);
     text(100*round(100000*perm/total)/100000 + "% complete", 1024, input.height+56);
