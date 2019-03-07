@@ -14,7 +14,7 @@ function setup() {
   }
   fill(255);
   textSize(20);
-  text("Number of points:", 1024, 24);
+  text("Number of points:", 1026, 24);
   input = createInput();
   input.position(1024, 32);
   
@@ -84,9 +84,9 @@ function draw() {
     rect(1024, input.height+40, 256, 64);
     fill(255);
     textSize(20);
-    text(Number.parseFloat(100*round(100000*perm/total)/100000).toFixed(5) + "% complete", 1024, input.height+56);
-    text("Shortest path:", 1024, input.height+80);
-    text(min_dist, 1024, input.height+96);
+    text(Number.parseFloat(100*round(100000*perm/total)/100000).toFixed(5) + "% complete", 1026, input.height+56);
+    text("Shortest path:", 1026, input.height+80);
+    text(min_dist, 1024, input.height+108);
   }
 }
 
