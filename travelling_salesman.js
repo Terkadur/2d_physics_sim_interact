@@ -79,7 +79,7 @@ function draw() {
       
       rev(dots, max_i + 1, dots.length - 1);
     }
-    fill(0);
+    fill(255, 0, 0);
     noStroke();
     rect(1024, input.height+40, 256, 64);
     fill(255);
