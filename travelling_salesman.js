@@ -81,12 +81,12 @@ function draw() {
     }
     fill(0);
     noStroke();
-    rect(1024, input.height+40, 256, 64);
+    rect(1024, input.height+40, 256, height/2);
     fill(255);
     textSize(20);
     text(Number.parseFloat(100*round(100000*perm/total)/100000).toFixed(5) + "% complete", 1026, input.height+56);
     text("Shortest path:", 1026, input.height+80);
-    text(min_dist, 1024, input.height+108);
+    text(min_dist, 1024, input.height+100);
   }
 }
 
