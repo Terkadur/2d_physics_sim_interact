@@ -84,7 +84,9 @@ function draw() {
     rect(1024, height/2, 256, height/2);
     fill(255);
     textSize(20);
-    text(100*round(100000*perm/total)/100000 + "%", 1024, height-8);
+    text(100*round(100000*perm/total)/100000 + "% complete", 1024, input.height+56);
+    text("Shortest path:", 1024, input.height+80);
+    text(min_dist, 1024, input.height+84);
   }
 }
 
