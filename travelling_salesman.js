@@ -86,7 +86,7 @@ function draw() {
     textSize(20);
     text(Number.parseFloat(100*round(100000*perm/total)/100000).toFixed(5) + "% complete", 1026, input.height+56);
     text("Shortest path:", 1026, input.height+80);
-    text(min_dist, 1024, input.height+100);
+    text(min_dist, 1024, input.height+104);
   }
 }
 
