@@ -116,6 +116,7 @@ function iterate() {
   perm = 0;
   min_dist = -1;
   points = input.value();
+  dots = [];
   for (var i = 0; i < points; i++) {
     dots[i] = [random(512), random(height), i];
   }
