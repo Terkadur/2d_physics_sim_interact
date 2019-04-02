@@ -90,6 +90,11 @@ function draw() {
   }
 }
 
+function keyPressed() {
+  if (keyCode === ENTER) {
+    iterate();
+  }
+}
 
 function swap(a, b, c) {
   var temp = a[b];
